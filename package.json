@@ -1,0 +1,19 @@
+{
+  "name": "sat-solver",
+  "version": "1.0.0",
+  "description": "Simple sat solver for javascript",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexCortinas/sat-solver-js.git"
+  },
+  "author": "Álex Cortiñas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexCortinas/sat-solver-js/issues"
+  },
+  "homepage": "https://github.com/AlexCortinas/sat-solver-js#readme",
+  "dependencies": {
+    "collections": "^5.1.2"
+  }
+}
