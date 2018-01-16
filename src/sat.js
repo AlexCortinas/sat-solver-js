@@ -10,7 +10,7 @@ class SATInstance {
 
   parseClause(clause) {
     const convertedClause = [];
-    let negated, encodedLiteral, aux;
+    let negated, encodedLiteral;
 
     clause.split(' ').forEach(variable => {
       negated = variable[0] == '~';
@@ -61,7 +61,7 @@ class SATInstance {
   }
 
   setupWatchlist() {
-    const watchlist = [...Array(this.variables.length * 2)].map(_ => new Deque());
+    const watchlist = [...Array(this.variables.length * 2)].map(() => new Deque());
     this.clauses.forEach(clause => watchlist[clause[0]].push(clause));
     return watchlist;
   }
@@ -134,7 +134,7 @@ class SATInstance {
   }
 
   solutions(partialAssignment, verbose) {
-    let a, watchlist, assignment, selection, assignments, count, ret;
+    let a, watchlist, assignment, assignments, count, ret;
 
     if (partialAssignment && partialAssignment.array) {
       partialAssignment = partialAssignment.array;
